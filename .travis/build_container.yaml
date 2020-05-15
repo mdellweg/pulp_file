@@ -21,6 +21,7 @@
           pull: true
         state: present
         source: build
+      when: false
 
     - name: "Build pulp image"
       docker_image:
@@ -34,6 +35,7 @@
       # layers.
         name: "{{ image.name }}"
         tag: "{{ image.tag }}"
+        debug: true
         build:
           path: "../.."
           dockerfile: "{{ playbook_dir }}/Containerfile"

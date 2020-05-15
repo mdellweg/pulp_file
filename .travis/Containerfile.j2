@@ -1,4 +1,4 @@
-FROM pulp_ci_base:{{ image.tag }}
+FROM x9c4/pulp-ci-fedora31:latest
 
 {% if s3_test | default(false) %}
 # Hacking botocore (https://github.com/boto/botocore/pull/1990)
